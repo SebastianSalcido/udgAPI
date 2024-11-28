@@ -3,8 +3,8 @@ package com.example.UDG.Models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "students")
-public class StudentModel {
+@Table(name = "Freelancers")
+public class WorkerModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false,unique = true)
@@ -12,8 +12,8 @@ public class StudentModel {
     private Integer code;
     private String name;
     private String email;
-    private String degree;
-    private Double score;
+    private String laborField;
+    private Double money;
 
     public Long getId() {
         return id;
@@ -47,19 +47,19 @@ public class StudentModel {
         this.email = email;
     }
 
-    public String getDegree() {
-        return degree;
+    public String getLaborField() {
+        return laborField;
     }
 
-    public void setDegree(String degree) {
-        this.degree = degree;
+    public void setLaborField(String laborField) {
+        this.laborField = laborField;
     }
 
-    public Double getScore() {
-        return score;
+    public Double getMoney() {
+        return money;
     }
 
-    public void setScore(Double score) {
-        this.score = score;
+    public void setMoney(Double money) {
+        this.money = money;
     }
 }
